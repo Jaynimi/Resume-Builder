@@ -23,6 +23,24 @@
 	filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.inputBox {
+	border: none;
+	border-radius: 10px;
+	background-color: transparent;
+	background-color: #f0f0f0;
+	/* height: 30px; */
+	width: 100%;
+	color: #333;
+	padding: 5px;
+	margin-bottom: 4px;
+}
+
+.headingText {
+	border-radius: border-box;
+	margin: 40px 15% 25px 15%;
+	background-color: #e6e6e6;
+}
+
 @keyframes logo-spin {
 	from {
 		transform: rotate(0deg);

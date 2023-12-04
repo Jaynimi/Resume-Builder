@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { IoMdMail } from "react-icons/io";
+import { FaPhone } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
 
 export default function InfoDetails({
 	emailText,
@@ -17,6 +20,7 @@ export default function InfoDetails({
 	flexWrap,
 	height,
 	alignSelf,
+	alignItems,
 }) {
 	const resumeInfo = {
 		textAlign: textAlign || "center",
@@ -28,7 +32,7 @@ export default function InfoDetails({
 		flexWrap: flexWrap || "wrap",
 		justifyContent: justifyContent || "space-around",
 		height: height || "auto",
-		alignSelf: alignSelf || "flex-start",
+		alignSelf: alignSelf || "",
 	};
 
 	const innerContainer = {
@@ -42,6 +46,8 @@ export default function InfoDetails({
 		width: width || "100vw",
 		padding: padding || "0px 30px",
 		flexDirection: flexDirection || "row",
+		alignItems: alignItems || "",
+		// alignItems: alignItems || "flex-start",
 	};
 	const inputStyle = {
 		color: fontColor || "black",
@@ -82,12 +88,20 @@ export default function InfoDetails({
 						/>
 					</div>
 					<div style={resumeInfo}>
-						<span>{email}</span>
-						<span>{phone}</span>
-						<span>{address}</span>
+						<span>
+							<i className="fa-solid fa-phone" />
+							<IoMdMail /> {email}
+						</span>
+						<span>
+							<FaPhone /> {phone}
+						</span>
+						<span>
+							<FaLocationDot /> {address}
+						</span>
 					</div>
 				</div>
 			</div>
+			<i className="fa-solid fa-phone" />
 		</div>
 	);
 }
