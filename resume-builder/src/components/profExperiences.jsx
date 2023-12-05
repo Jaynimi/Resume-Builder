@@ -12,17 +12,21 @@ export default function Experiences({
 	acompany,
 	arole,
 	adescription,
+	margin,
 }) {
 	const displayInputStyle = {
 		display: "flex",
 		justifyContent: "space-between",
 		padding: "0 30px",
 	};
-	const inputStyle = {
-		width: "30%",
+	const align = {
+		textAlign: "center",
+		padding: "4px 0 0 0",
+		textTransform: "uppercase",
+		fontWeight: "700",
 	};
 	const displayStyle = {
-		width: "65%",
+		margin: margin || "",
 	};
 
 	const [startDate, setStartDate] = useState(astart);
@@ -43,54 +47,69 @@ export default function Experiences({
 
 	return (
 		<>
-			<div>
+			<div className="proff">
 				<div className="eduContainer">
 					<div className="eduInputs">
+						<div style={align}>Professional Experience</div>
+						Start Date:
 						<InputComponent
 							onInputChange={(newValue) =>
 								handleInputChanges(newValue, setStartDate)
 							}
 							type={"date"}
+							placeholder={startDate}
 						/>
+						End Date:
 						<InputComponent
 							onInputChange={(newValue) =>
 								handleInputChanges(newValue, setEndDate)
 							}
 							type={"date"}
+							placeholder={endDate}
 						/>
+						City:
 						<InputComponent
 							onInputChange={(newValue) =>
 								handleInputChanges(newValue, setCity)
 							}
 							type={"text"}
+							placeholder={city}
 						/>
+						Country:
 						<InputComponent
 							onInputChange={(newValue) =>
 								handleInputChanges(newValue, setCountry)
 							}
 							type={"text"}
+							placeholder={country}
 						/>
+						Company:
 						<InputComponent
 							onInputChange={(newValue) =>
 								handleInputChanges(newValue, setCompany)
 							}
 							type={"text"}
+							placeholder={company}
 						/>
+						Role:
 						<InputComponent
 							onInputChange={(newValue) =>
 								handleInputChanges(newValue, setRole)
 							}
 							type={"text"}
+							placeholder={role}
 						/>
+						Job Description
 						<InputComponent
 							onInputChange={(newValue) =>
 								handleInputChanges(newValue, setDescription)
 							}
 							type={"text"}
+							placeholder={description}
 						/>
 					</div>
 
-					<div className="eduDisplay">
+					<div className="profDisplay" style={displayStyle}>
 						<div className="eduLocation">
 							<div>
 								<DisplayComponent value={startDate} />
@@ -109,7 +128,9 @@ export default function Experiences({
 								<DisplayComponent value={company} />
 							</div>
 
-							<DisplayComponent value={role} />
+							<div className="roleInfo">
+								<DisplayComponent value={role} />
+							</div>
 							<DisplayComponent value={description} />
 						</div>
 					</div>

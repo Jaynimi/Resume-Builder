@@ -49,6 +49,7 @@ function App() {
 				headingText={"Education"}
 				fontColor={"#241a26"}
 				fontSize={"20px"}
+				margin={"40px 15% 25px 15%"}
 			/>
 			{/* <div style={displayInputStyle}>
 				<div style={inputStyle}>
@@ -79,21 +80,34 @@ function App() {
 				adegree={"Bachelors in Agriculture (Animal SCiences)"}
 			/>
 			<EducationHeadings
-				headingText={"Peofessional Experience"}
+				headingText={"Professional Experience"}
 				fontColor={"#241a26"}
 				fontSize={"20px"}
-				margin={"-60px 15% 25px 15%"}
+				margin={"-120px 15% 25px 15%"}
+			/>
+			<Experiences
+				astart={"11-08-2022"}
+				aend={"06-11-2022"}
+				acity={"Lagos State"}
+				acountry={"Nigeria"}
+				acompany={"Bangladesh Social Club"}
+				arole={"Frontend Developer"}
+				adescription={
+					"Spearheaded the collaborative effort to construct the company’s website from inception, showcasing expertise in HTML, CSS, and JavaScript. Crafted and deployed responsive web pages."
+				}
+				margin={"-50px 0 0 0"}
 			/>
 			<Experiences
 				astart={"11-12-2022"}
-				aend={"present"}
-				acity={"Ile-Ife, Osun State"}
-				acountry={"Nigeria"}
+				aend={"21-01-2023"}
+				acity={"Oman"}
+				acountry={"India"}
 				acompany={"Bangladesh Social Club"}
 				arole={"Frontend Developer"}
 				adescription={
 					"Spearheaded the collaborative effort to construct the company’s website from inception, showcasing expertise in HTML, CSS, and JavaScript. Crafted and deployed responsive web pages for both mobile and desktop platforms, significantly improving user engagement."
 				}
+				margin={"-130px 0 0 0"}
 			/>
 		</div>
 	);

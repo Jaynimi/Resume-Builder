@@ -17,9 +17,13 @@ export default function Education({
 		justifyContent: "space-between",
 		padding: "0 30px",
 	};
-	const inputStyle = {
-		width: "30%",
+	const align = {
+		textAlign: "center",
+		padding: "4px 0 0 0",
+		textTransform: "uppercase",
+		fontWeight: "700",
 	};
+
 	const displayStyle = {
 		width: "65%",
 	};
@@ -39,7 +43,9 @@ export default function Education({
 		<>
 			<div>
 				<div className="eduContainer">
-					<div className="eduInputs">
+					<div className="eduInputs eduInput">
+						<div style={align}>education</div>
+						Start Date:
 						<InputComponent
 							onInputChange={(newValue) =>
 								handleInputChanges(newValue, setStartDate)
@@ -47,6 +53,7 @@ export default function Education({
 							type={"date"}
 							placeholder={startDate}
 						/>
+						End Date:
 						<InputComponent
 							onInputChange={(newValue) =>
 								handleInputChanges(newValue, setEndDate)
@@ -54,6 +61,7 @@ export default function Education({
 							type={"date"}
 							placeholder={endDate}
 						/>
+						City:
 						<InputComponent
 							onInputChange={(newValue) =>
 								handleInputChanges(newValue, setCity)
@@ -61,6 +69,7 @@ export default function Education({
 							type={"text"}
 							placeholder={city}
 						/>
+						Country:
 						<InputComponent
 							onInputChange={(newValue) =>
 								handleInputChanges(newValue, setCountry)
@@ -68,6 +77,7 @@ export default function Education({
 							type={"text"}
 							placeholder={country}
 						/>
+						School:
 						<InputComponent
 							onInputChange={(newValue) =>
 								handleInputChanges(newValue, setSchool)
@@ -75,12 +85,13 @@ export default function Education({
 							type={"text"}
 							placeholder={school}
 						/>
+						Degree:
 						<InputComponent
 							onInputChange={(newValue) =>
 								handleInputChanges(newValue, setDegree)
 							}
 							type={"text"}
-							placeholder={city}
+							placeholder={degree}
 						/>
 					</div>
 

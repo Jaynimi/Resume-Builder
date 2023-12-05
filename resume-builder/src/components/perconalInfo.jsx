@@ -34,7 +34,7 @@ export default function CustomInput({
 		color: fontColor || "white",
 		alignSelf: alignSelf || "stretch",
 		fontSize: fontSize || "30px",
-		padding: padding || "10px 0 10px 0",
+		padding: padding || "30px 0 10px 0",
 		fontWeight: fontWeight || "700",
 	};
 	const container = {
@@ -74,7 +74,9 @@ export default function CustomInput({
 		flexDirection: flexDirection || "column",
 		display: display || "flex",
 		flexWrap: flexWrap || "wrap",
-		padding: padding || "0 0 10px 0",
+		padding: padding || "0 0 30px 0",
+		fontSize: fontSize || "0.8rem",
+
 		// justifyContent: justifyContent || "space-around",
 		// height: height || "auto",
 		// alignSelf: alignSelf || "",
@@ -84,6 +86,8 @@ export default function CustomInput({
 		flexDirection: flexDirection || "column",
 		display: display || "flex",
 		width: width || "30%",
+		color: "#241a26",
+		fontSize: "0.67rem",
 	};
 	const contactContainer = {
 		boxSizing: boxSizing || "border-box",
@@ -92,7 +96,7 @@ export default function CustomInput({
 		width: width || "100vw",
 		padding: padding || "0px 30px",
 		flexDirection: flexDirection || "row",
-		alignItems: alignItems || "",
+		alignItems: alignItems || "flex-end",
 		// alignItems: alignItems || "flex-start",
 	};
 	const contactInputStyle = {
@@ -101,6 +105,12 @@ export default function CustomInput({
 		width: width || "",
 		margin: margin || "",
 		backgroundColor: backgroundColor || "white",
+	};
+	const align = {
+		textAlign: "center",
+		padding: "4px 0 0 0",
+		textTransform: "uppercase",
+		fontWeight: "700",
 	};
 
 	const [value, setValue] = useState(defaultText);
@@ -111,7 +121,9 @@ export default function CustomInput({
 	return (
 		<>
 			<div style={contactContainer}>
-				<div style={innerContactContainer}>
+				<div style={innerContactContainer} className="fontss">
+					<div style={align}>Personal Details</div>
+					Name:
 					<input
 						className="inputBox"
 						type="text"
@@ -119,6 +131,7 @@ export default function CustomInput({
 						onChange={(event) => setValue(event.target.value)}
 						style={inputStyle}
 					/>
+					Email:
 					<input
 						className="inputBox"
 						type="text"
@@ -126,7 +139,7 @@ export default function CustomInput({
 						onChange={(event) => setEmail(event.target.value)}
 						style={contactInputStyle}
 					/>
-
+					Phone:
 					<input
 						className="inputBox"
 						type="text"
@@ -134,7 +147,7 @@ export default function CustomInput({
 						onChange={(event) => setPhone(event.target.value)}
 						style={contactInputStyle}
 					/>
-
+					Address:
 					<input
 						className="inputBox"
 						type="text"
