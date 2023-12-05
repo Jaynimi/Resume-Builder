@@ -29,6 +29,7 @@ export default function EducationHeadings({
 		fontSize: fontSize || "30px",
 		padding: padding || "2px 0 2px 0",
 		fontWeight: fontWeight || "700",
+		margin: margin || "40px 15% 25px 15%",
 	};
 
 	// contact info Display

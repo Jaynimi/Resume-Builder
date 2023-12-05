@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function InputComponent({ onInputChange }) {
+export default function InputComponent({ onInputChange, type, placeholder }) {
 	const inputStyle = {
 		// your input styles here
 	};
@@ -13,9 +13,10 @@ export default function InputComponent({ onInputChange }) {
 	return (
 		<input
 			className="inputBox"
-			type="date"
+			type={type}
 			onChange={handleInputChangeLocal}
 			style={inputStyle}
+			defaultValue={placeholder}
 		/>
 	);
 }
